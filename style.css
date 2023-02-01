@@ -1,0 +1,121 @@
+:root{
+    --dark:#374151;
+    --darker:#1F2937;
+    --darkest:#111827;
+    --gray:#6B7280;
+    --light:#EEE;
+    --pink:#EC4899;
+    --purple:#8B5Cf6;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fira sans',sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background: var(--dark);
+    color: white;
+}
+header{
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+}
+header h1{
+    color: var(--gray);
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+#new-task-form{
+    display: flex;
+}
+#new-task-form input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#new-task-form input{
+    flex: 1 1 0%;
+    background: var(--darker);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: var(--light);
+}
+#new-task-form button{
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image:linear-gradient(to right,var(--pink),var(--purple));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+#new-task-form button:hover{
+    opacity: 0.8;
+}
+#new-task-form button:active{
+    opacity: 0.67;
+}
+.tasks-container{
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.tasks-container h2{
+    color: var(--gray);
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 0%;
+    background: var(--darker);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+   
+}
+.task .text{
+    display: block;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.125rem;
+    color: var(--light);
+}
+.task .content .text:not(:read-only){
+    color: var(--light);
+}
+
+.work-buttons button{
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+    }
+    .work-buttons button:hover{
+        opacity: 0.8;
+    }
+    .work-buttons button:active{
+        opacity: 0.6;
+    }
+    .work-buttons .Edit{
+        background-image:linear-gradient(to right,var(--pink),var(--purple));
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;
+    }
+    .work-buttons .Delete{
+        color: crimson;
+    }
